@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="https://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <form method="post" action="/">
+        <input type="submit" value="selectAll">
+    </form>
+    <table>
+        <tr th:each="line:${file_contents}">
+            <td th:text=${line}></td>
+        </tr>
+    </table>
+</body>
+</html>
